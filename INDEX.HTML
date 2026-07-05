@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Portfolio</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Clicker+Script&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+
+    <div class="logo">Wasii</div>
+
+    <ul>
+        <li onclick="showPage('home')"><i class="fa fa-home"></i> Home</li>
+        <li onclick="showPage('about')"><i class="fa fa-user"></i> About</li>
+        <li onclick="showPage('services')"><i class="fa fa-list"></i> Services</li>
+        <li onclick="showPage('portfolio')"><i class="fa fa-briefcase"></i> Portfolio</li>
+        <li onclick="showPage('contact')"><i class="fa fa-envelope"></i> Contact</li>
+    </ul>
+
+</div>
+
+<!-- MOBILE MENU BUTTON -->
+<div class="menu-btn" onclick="toggleSidebar()">
+    <i class="fa fa-bars"></i>
+</div>
+<!-- SETTINGS -->
+<div class="settings">
+
+    <button id="theme">🌙</button>
+    <button id="gear">⚙️</button>
+
+    <div class="colors">
+
+        <span onclick="changeColor('#ff4d4d')" style="background:#ff4d4d"></span>
+        <span onclick="changeColor('#ff7b00')" style="background:#ff7b00"></span>
+        <span onclick="changeColor('#00c853')" style="background:#00c853"></span>
+        <span onclick="changeColor('#2196f3')" style="background:#2196f3"></span>
+        <span onclick="changeColor('#e91e63')" style="background:#e91e63"></span>
+
+    </div>
+
+</div>
+
+<!-- MAIN -->
+<div class="main">
+<div class="content">
+    <!-- all pages here -->
+
+
+<!-- HOME -->
+<section id="home" class="page active">
+
+    <div class="hero">
+
+        <div class="text">
+<h1 class="hero-title">
+    Hello, my name is <span class="name">M. Wasif Asghar</span>
+</h1>
+
+            <h2>
+                I'm a <span id="typing"></span>
+            </h2>
+
+            <p>
+                 I am a professional Full Stack Developer with expertise in Front-End & Back-End Development, UI/UX Design, and Modern Web Applications.
+                I build responsive and animated websites using HTML, CSS, JavaScript and React.
+                I also work with APIs, C++ and C# for system-level and backend solutions.
+            </p>
+
+            <button onclick="showPage('about')">More About Me</button>
+
+        </div>
+
+        <div class="image-box">
+    <img src="images/wasii.webp" alt="Wasif Profile Image">
+</div>
+
+    </div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section id="about" class="page">
+
+   
+    <div class="section-title">
+        <h1>About Me</h1>
+         <div class="line-full"></div>
+        <div class="line-half"></div>
+    </div>
+
+
+    <p class="small-line">
+    Creative Front-End &
+    <span class="highlight">Full Stack Developer</span>
+</p>
+
+    <p class="big-line">
+    
+I am a dedicated Full Stack Developer and UI/UX Enthusiast with strong expertise in creating modern, responsive, and interactive web applications.
+My skill set includes HTML, CSS, JavaScript, React.js, API Integration, Front-End Development, Back-End Development, C++, and C#.
+
+I enjoy transforming ideas into powerful digital solutions by developing intuitive user interfaces, scalable backend systems, and seamless user experiences.
+From responsive websites and dynamic web applications to API-driven platforms, I focus on delivering clean code, optimized performance, and visually engaging designs.
+
+My goal is to build innovative digital products that not only look great but also provide exceptional functionality, accessibility, and user satisfaction across all devices.
+
+    </p>
+
+    <div class="about-grid">
+
+       <!-- PERSONAL INFO -->
+<div class="info-box">
+
+    <h2>Personal Information</h2>
+
+    <div class="info-grid">
+
+        <div class="info-item">
+            <i class="fa fa-user"></i>
+            <span><b>Name:</b> M. Wasif Asghar</span>
+        </div>
+
+        <div class="info-item">
+            <i class="fa fa-calendar"></i>
+            <span><b>Age:</b> 24</span>
+        </div>
+
+        <div class="info-item">
+            <i class="fa fa-location-dot"></i>
+            <span><b>City:</b> Lahore</span>
+        </div>
+
+        <div class="info-item">
+            <i class="fa fa-envelope"></i>
+            <span><b>Email:</b> wasifaliasghar7@gmail.com</span>
+        </div>
+
+        <div class="info-item">
+            <i class="fa fa-briefcase"></i>
+            <span><b>Freelance:</b> Available</span>
+        </div>
+
+        <div class="info-item">
+            <i class="fa fa-code"></i>
+            <span><b>Experience:</b> 4+ Years</span>
+        </div>
+
+    </div>
+
+    <!-- Buttons -->
+    <div class="buttons">
+        <a href="images/m.wasif.pdf" class="btn" download="Muhammad_Wasif_CV.pdf">
+            <i class="fas fa-download"></i> Download CV
+        </a>
+
+        <a href="#" class="btn hire" onclick="showPage('contact')">
+            <i class="fas fa-paper-plane"></i> Hire Me
+        </a>
+    </div>
+
+    <!-- Video -->
+    <div class="video-box">
+        <video controls autoplay muted loop>
+            <source src="images/video.mov" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+</div>
+
+<!-- CSS -->
+<style>
+.video-box{
+    margin-top:30px;
+    display:flex;
+    justify-content:center;
+}
+
+.video-box video{
+    width:100%;
+    max-width:700px;
+    border-radius:15px;
+    border:3px solid #00bcd4;
+    box-shadow:0 10px 30px rgba(0,0,0,.3);
+    object-fit:cover;
+    transition:.4s;
+}
+
+.video-box video:hover{
+    transform:scale(1.02);
+    box-shadow:0 15px 35px rgba(0,188,212,.5);
+}
+
+@media(max-width:768px){
+    .video-box video{
+        max-width:100%;
+    }
+}
+</style>
+
+     <!-- ================= SKILLS SECTION ================= -->
+<div class="skills-box">
+
+    <h2>Professional Skills</h2>
+
+    <!-- HTML -->
+    <div class="skill-card">
+        <div class="skill-head">
+            <span>HTML</span>
+            <span class="percent" data-target="95">0%</span>
+        </div>
+        <div class="skill-bar">
+            <div class="skill-fill" data-width="95%"></div>
+        </div>
+    </div>
+
+    <!-- CSS -->
+    <div class="skill-card">
+        <div class="skill-head">
+            <span>CSS</span>
+            <span class="percent" data-target="90">0%</span>
+        </div>
+        <div class="skill-bar">
+            <div class="skill-fill" data-width="90%"></div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <div class="skill-card">
+        <div class="skill-head">
+            <span>JavaScript</span>
+            <span class="percent" data-target="85">0%</span>
+        </div>
+        <div class="skill-bar">
+            <div class="skill-fill" data-width="85%"></div>
+        </div>
+    </div>
+
+    <!-- React -->
+    <div class="skill-card">
+        <div class="skill-head">
+            <span>React</span>
+            <span class="percent" data-target="80">0%</span>
+        </div>
+        <div class="skill-bar">
+            <div class="skill-fill" data-width="80%"></div>
+        </div>
+    </div>
+
+    <!-- C# -->
+    <div class="skill-card">
+        <div class="skill-head">
+            <span>C#</span>
+            <span class="percent" data-target="85">0%</span>
+        </div>
+        <div class="skill-bar">
+            <div class="skill-fill" data-width="85%"></div>
+        </div>
+    </div>
+
+    <!-- API -->
+    <div class="skill-card">
+        <div class="skill-head">
+            <span>API Integration</span>
+            <span class="percent" data-target="88">0%</span>
+        </div>
+        <div class="skill-bar">
+            <div class="skill-fill" data-width="88%"></div>
+        </div>
+    </div>
+
+    <!-- UI/UX -->
+    <div class="skill-card">
+        <div class="skill-head">
+            <span>UI / UX Design</span>
+            <span class="percent" data-target="82">0%</span>
+        </div>
+        <div class="skill-bar">
+            <div class="skill-fill" data-width="82%"></div>
+        </div>
+    </div>
+
+</div>
+
+    </div>
+<!-- ================= GAP ================= -->
+<div class="section-gap"></div>
+
+<!-- ================= RESUME SECTION ================= -->
+<div class="resume-wrapper">
+
+    <!-- EDUCATION -->
+    <div class="resume-box">
+
+        <div class="section-title">
+            <h2>Education</h2>
+            <div class="line-full"></div>
+            <div class="line-half"></div>
+        </div>
+
+        <div class="timeline">
+
+            
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="year">2017 - 2019</span>
+                   <h3>FSC Pre-Medical</h3>
+                <p>Punjab Group of Colleges</p>
+                <p>Grade: A</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="year">2019- 2023</span>
+                    <h3>BS Biotechnology</h3>
+                    <p>University of Central Punjab</p>
+                    <p>GPA: 3.21</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="year">2023 - 2026</span>
+                   <h3>BS Computer Science (BSCS)</h3>
+                <p>Pearson University UK</p>
+                <p>Grade: M</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- EXPERIENCE -->
+    <div class="resume-box">
+
+        <div class="section-title">
+            <h2>Experience</h2>
+            <div class="line-full"></div>
+            <div class="line-half"></div>
+        </div>
+
+        <div class="timeline">
+
+            <div class="timeline-item">
+    <div class="timeline-dot"></div>
+    <div class="timeline-content">
+        <span class="year">2024 - Present</span>
+        <h3>Senior Frontend Developer</h3>
+        <p>Freelance Web Development (Upwork & Private Clients)</p>
+        <p>Built 20+ responsive websites, dashboards & landing pages</p>
+    </div>
+</div>
+
+<div class="timeline-item">
+    <div class="timeline-dot"></div>
+    <div class="timeline-content">
+        <span class="year">2023 - 2024</span>
+        <h3>UI/UX Designer</h3>
+        <p>Freelance & Remote Projects</p>
+        <p>Designed modern SaaS dashboards & mobile app interfaces</p>
+    </div>
+</div>
+
+<div class="timeline-item">
+    <div class="timeline-dot"></div>
+    <div class="timeline-content">
+        <span class="year">2022 - 2023</span>
+        <h3>Frontend Developer Intern</h3>
+        <p>PixelCraft Solutions (Remote)</p>
+        <p>Worked on HTML, CSS, JavaScript & UI improvements</p>
+    </div>
+</div>
+
+<div class="timeline-item">
+    <div class="timeline-dot"></div>
+    <div class="timeline-content">
+        <span class="year">2023 - 2024</span>
+        <h3>Web Development Projects</h3>
+        <p>Pearson University UK (Academic Projects)</p>
+        <p>Developed academic projects including portfolio systems & dashboards</p>
+    </div>
+</div>
+
+<div class="timeline-item">
+    <div class="timeline-dot"></div>
+    <div class="timeline-content">
+        <span class="year">2022 - Present</span>
+        <h3>Full Stack Learning & Practice</h3>
+        <p>Self Learning & Practical Implementation</p>
+        <p>Worked with HTML, CSS, JS, APIs & responsive design systems</p>
+    </div>
+</div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- SERVICES -->
+
+
+<section id="services" class="page services-section">
+
+    <div class="section-title">
+        <h1>My Services</h1>
+
+        <!-- SAME STYLE LINES LIKE ABOUT -->
+        <div class="line-full"></div>
+        <div class="line-half"></div>
+
+        <p>Providing complete digital solutions for businesses and individuals.</p>
+    </div>
+
+    <div class="services-grid">
+
+        <!-- Web Development -->
+        <div class="service-card">
+            <i class="fas fa-code service-icon"></i>
+            <h3>Web Development</h3>
+            <p>Modern, fast, secure and fully responsive websites using latest technologies.</p>
+        </div>
+
+        <!-- App Development -->
+        <div class="service-card">
+            <i class="fas fa-mobile-screen-button service-icon"></i>
+            <h3>App Development</h3>
+            <p>Android & cross-platform mobile applications with modern UI and smooth performance.</p>
+        </div>
+
+        <!-- UI/UX Design -->
+        <div class="service-card">
+            <i class="fas fa-palette service-icon"></i>
+            <h3>UI/UX Design</h3>
+            <p>Creative, user-friendly and professional interface designs for web and mobile apps.</p>
+        </div>
+
+        <!-- Responsive Design -->
+        <div class="service-card">
+            <i class="fa-solid fa-handshake"></i>
+
+            <h3>Responsive Design</h3>
+            <p>Perfect layouts that adapt beautifully to desktop, tablet and mobile devices.</p>
+        </div>
+
+        <!-- SEO -->
+        <div class="service-card">
+            <i class="fas fa-chart-line service-icon"></i>
+            <h3>SEO Optimization</h3>
+            <p>Improve website visibility and ranking on Google and other search engines.</p>
+        </div>
+
+        <!-- Bug Fixing -->
+        <div class="service-card">
+            <i class="fas fa-bug service-icon"></i>
+            <h3>Bug Fixing</h3>
+            <p>Identify and solve website, application and coding errors efficiently.</p>
+        </div>
+
+        <!-- Website Maintenance -->
+        <div class="service-card">
+            <i class="fas fa-screwdriver-wrench service-icon"></i>
+            <h3>Website Maintenance</h3>
+            <p>Regular updates, performance improvements and security monitoring.</p>
+        </div>
+
+        <!-- API Integration -->
+        <div class="service-card">
+            <i class="fas fa-plug service-icon"></i>
+            <h3>API Integration</h3>
+            <p>Payment gateways, third-party APIs and custom integrations for your projects.</p>
+        </div>
+          <div class="service-card">
+        
+    <i class="fas fa-cloud service-icon"></i>
+        <h3>Cloud Solutions</h3>
+        <p>Cloud deployment and hosting management.</p>
+    </div>
+
+    <div class="service-card">
+        
+        <i class="fas fa-headset service-icon"></i>
+        <h3>Technical Support</h3>
+        <p>24/7 assistance and technical consultation.</p>
+    </div>
+
+    <div class="service-card">
+        <i class="fas fa-credit-card service-icon"></i>
+        <h3>Payment Gateway</h3>
+    <p>Secure online payment processing for your business with multiple payment options.</p>
+    </div>
+<div class="service-card">
+    <i class="fas fa-cart-shopping service-icon"></i>
+    <h3>E-Commerce Development</h3>
+    <p>Build secure and scalable online stores with shopping carts, product management, and payment integration.</p>
+</div>
+    </div>
+<!-- Contributions Section -->
+
+<div class="contributions-wrapper">
+
+    <h2 class="contribution-title">Contributions</h2>
+
+    <div class="contribution-stats">
+
+        <div class="contribution-card">
+            <h3>1482</h3>
+            <span>Total Contributions</span>
+        </div>
+
+        <div class="contribution-card">
+            <h3>247</h3>
+            <span>Active Days</span>
+        </div>
+
+        <div class="contribution-card">
+            <h3>86</h3>
+            <span>Best Day</span>
+        </div>
+
+        <div class="contribution-card">
+            <h3>35</h3>
+            <span>Longest Streak</span>
+        </div>
+
+        <div class="contribution-card">
+            <h3>4</h3>
+            <span>Daily Average</span>
+        </div>
+
+    </div>
+
+    <div class="contribution-graph-box">
+
+        <div class="months">
+            <span>Jul</span>
+            <span>Aug</span>
+            <span>Sep</span>
+            <span>Oct</span>
+            <span>Nov</span>
+            <span>Dec</span>
+            <span>Jan</span>
+            <span>Feb</span>
+            <span>Mar</span>
+            <span>Apr</span>
+            <span>May</span>
+            <span>Jun</span>
+        </div>
+
+        <div class="graph-area">
+
+            <div class="days-label">
+                <span>Mon</span>
+                <span>Wed</span>
+                <span>Fri</span>
+            </div>
+
+            <div class="heatmap" id="heatmap"></div>
+
+        </div>
+
+        <div class="graph-footer">
+
+            <p>1482 contributions in 2025</p>
+
+            <div class="legend">
+
+                
+
+                <div class="legend-box l0"></div>
+                <div class="legend-box l1"></div>
+                <div class="legend-box l2"></div>
+                <div class="legend-box l3"></div>
+                <div class="legend-box l4"></div>
+
+                
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+</section>
+
+
+<!-- PORTFOLIO -->
+<section id="portfolio" class="page">
+
+    <h1>Portfolio</h1>
+     
+
+    <div class="line-full"></div>
+    <div class="line-half"></div>
+    <h3>Some of my recent projects</h3>
+    <div class="projects">
+
+        <div class="project-card">
+            <img src="images/portfolio1.png" alt="">
+            <div class="project-info">
+                <h3>Food Mart</h3>
+                <button class="view-btn" data-img="images/portfolio1.png">
+                    View Full Preview
+                </button>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <img src="images/portfolio2.png" alt="">
+            <div class="project-info">
+                <h3>FreshShop</h3>
+                <button class="view-btn" data-img="images/portfolio2.png">
+                    View Full Preview
+                </button>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <img src="images/portfolio3.png" alt="">
+            <div class="project-info">
+                <h3>Essence</h3>
+                <button class="view-btn" data-img="images/portfolio3.png">
+                    View Full Preview
+                </button>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <img src="images/portfolio4.png" alt="">
+            <div class="project-info">
+                <h3>Winkel</h3>
+                <button class="view-btn" data-img="images/portfolio4.png">
+                    View Full Preview
+                </button>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <img src="images/portfolio5.png" alt="">
+            <div class="project-info">
+                <h3>Time Zone</h3>
+                <button class="view-btn" data-img="images/portfolio5.png">
+                    View Full Preview
+                </button>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <img src="images/portfolio6.png" alt="">
+            <div class="project-info">
+                <h3>Stylish</h3>
+                <button class="view-btn" data-img="images/portfolio6.png">
+                    View Full Preview
+                </button>
+            </div>
+        </div>
+        <div class="project-card">
+            <img src="images/portfolio7.png" alt="">
+            <div class="project-info">
+                <h3>Modish.</h3>
+                <button class="view-btn" data-img="images/portfolio7.png">
+                    View Full Preview
+                </button>
+            </div>
+        </div>
+        <div class="project-card">
+            <img src="images/portfolio8.png" alt="">
+            <div class="project-info">
+                <h3>Furni.</h3>
+                <button class="view-btn" data-img="images/portfolio8.png">
+                    View Full Preview
+                </button>
+            </div>
+        </div>
+        <div class="project-card">
+            <img src="images/portfolio9.png" alt="">
+            <div class="project-info">
+                <h3>VPN</h3>
+                <button class="view-btn" data-img="images/portfolio9.png">
+                    View Full Preview
+                </button>
+            </div>
+        </div>
+        <div class="project-card">
+            <img src="images/portfolio10.png" alt="">
+            <div class="project-info">
+                <h3>Personal Portfolio</h3>
+                <button class="view-btn" data-img="images/portfolio10.png">
+                    View Full Preview
+                </button>
+            </div>
+        </div>
+        <div class="project-card">
+            <img src="images/portfolio11.png" alt="">
+            <div class="project-info">
+                <h3>Food</h3>
+                <button class="view-btn" data-img="images/portfolio11.png">
+                    View Full Preview
+                </button>
+            </div>
+        </div>
+        <div class="project-card">
+            <img src="images/portfolio12.png" alt="">
+            <div class="project-info">
+                <h3>Hotel</h3>
+                <button class="view-btn" data-img="images/portfolio12.png">
+                    View Full Preview
+                </button>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<!-- Modal -->
+
+<div class="portfolio-modal">
+
+    <span class="close-modal">&times;</span>
+
+    <div class="modal-content">
+
+        <img id="modalImage" src="">
+
+    </div>
+
+</div>
+
+<!-- CONTACT -->
+<section id="contact" class="page contact-section">
+
+    <div class="section-title">
+        <h1>Let’s Build Something Amazing</h1>
+        <div class="line-full"></div>
+        <div class="line-half"></div>
+        <p>Have an idea? Send me a message and I’ll reply within 24 hours.</p>
+    </div>
+
+    <div class="contact-wrapper">
+
+        <!-- LEFT PREMIUM INFO -->
+        <div class="contact-info">
+
+            <div class="info-card">
+                <i class="fas fa-envelope"></i>
+                <div>
+                    <h3>Email</h3>
+                    <p>wasifaliasghar7@gmail.com</p>
+                </div>
+            </div>
+
+            <div class="info-card">
+                <i class="fas fa-map-marker-alt"></i>
+                <div>
+                    <h3>Location</h3>
+                    <p>Lahore, Pakistan</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- FORM -->
+        <div class="contact-form">
+
+            <form action="https://formsubmit.co/wasifaliasghar7@gmail.com" method="POST">
+
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
+
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <input type="text" name="subject" placeholder="Subject" required>
+                <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+
+                <button type="submit">Send Message</button>
+
+            </form>
+
+            <!-- SOCIAL (NOW UNDER FORM) -->
+            <div class="social-bar-bottom">
+
+    <a href="https://github.com/Wasiicodes" class="social-item" target="_blank" rel="noopener noreferrer">
+    <i class="fab fa-github"></i>
+    <span>GitHub</span>
+</a>
+   
+   <a href="https://www.fiverr.com/s/DB8m8rQ"
+   class="social-item"
+   target="_blank"
+   rel="noopener noreferrer">
+    <i class="fas fa-briefcase"></i>
+    <span>Fiverr</span>
+</a>
+
+ <a href="https://wa.me/923239636363" class="social-item" target="_blank" rel="noopener noreferrer">
+    <i class="fab fa-whatsapp"></i>
+    <span>WhatsApp</span>
+</a>
+
+    <a href="https://www.upwork.com/freelancers/~0187cb0fce432579f9?mp_source=share" 
+   class="social-item" 
+   target="_blank" 
+   rel="noopener noreferrer">
+    <i class="fas fa-briefcase"></i>
+    <span>Upwork</span>
+</a>
+
+</div>
+
+        </div>
+
+    </div>
+
+</section>
+
+</div>
+
+<script src="script.js"></script>
+
+
+</body>
+</html>
